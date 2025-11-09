@@ -1,4 +1,4 @@
-import { HashLink } from "react-router-hash-link"
+import { Link } from "react-router-dom"
 import { Github, Linkedin, Twitter } from "lucide-react"
 
 export function Footer() {
@@ -7,13 +7,12 @@ export function Footer() {
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
-            <HashLink 
+            <Link 
               to="/" 
-              scroll={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               className="font-playfair text-3xl font-bold tracking-tight"
             >
               Rahul<span className="text-muted-foreground">Kumar</span>
-            </HashLink>
+            </Link>
             <p className="mt-4 text-muted-foreground">
               Full Stack Developer specializing in creating beautiful, functional websites and applications.
             </p>
@@ -23,49 +22,44 @@ export function Footer() {
             <h3 className="text-xl font-medium mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <HashLink 
+                <Link 
                   to="/" 
-                  scroll={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Home
-                </HashLink>
+                </Link>
               </li>
               <li>
-                <HashLink 
+                <Link 
                   to="/projects" 
-                  scroll={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Projects
-                </HashLink>
+                </Link>
               </li>
               <li>
-                <HashLink 
+                <Link 
                   to="/blog" 
-                  scroll={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Blog
-                </HashLink>
+                </Link>
               </li>
               <li>
-                <HashLink 
-                  to="/#contact" 
-                  scroll={el => el ? el.scrollIntoView({ behavior: 'smooth', block: 'start' }) : window.scrollTo({ top: 0, behavior: 'smooth' })}
+                <Link 
+                  to="/contact" 
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Contact
-                </HashLink>
+                </Link>
               </li>
               <li>
-                <HashLink 
-                  to="/#education" 
-                  scroll={el => el ? el.scrollIntoView({ behavior: 'smooth', block: 'start' }) : window.scrollTo({ top: 0, behavior: 'smooth' })}
+                <Link 
+                  to="/education" 
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Education
-                </HashLink>
+                </Link>
               </li>
             </ul>
           </div>
