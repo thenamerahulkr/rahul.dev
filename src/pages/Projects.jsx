@@ -16,7 +16,7 @@ export default function Projects() {
         const { data, error: fetchError } = await supabase
           .from('projects')
           .select('id, slug, title, description, technologies, image')
-          .order('id', { ascending: true })
+          .order('created_at', { ascending: false })
 
         if (fetchError) throw fetchError
 

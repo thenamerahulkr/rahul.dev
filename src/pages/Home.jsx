@@ -18,7 +18,7 @@ export default function Home() {
         const { data: projectsData, error: projectsError } = await supabase
           .from('projects')
           .select('*')
-          .order('id', { ascending: true })
+          .order('created_at', { ascending: false })
           .limit(4)
 
         if (projectsError) throw projectsError
